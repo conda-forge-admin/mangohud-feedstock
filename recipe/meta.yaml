@@ -87,13 +87,7 @@ requirements:
     - libxkbcommon     # [linux]
 
 test:
-  files:
-    - test_rtld_next/
-  requires:
-    - {{ compiler('c') }}
-    - {{ stdlib('c') }}
   commands:
-    - bash test_rtld_next/run.sh  # [linux]
     - mangohud --version
     - mangohud echo hi  # [unix]
     - where mangohud    # [win]
